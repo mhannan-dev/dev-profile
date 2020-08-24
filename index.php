@@ -35,7 +35,7 @@ if ($post)
 
                             <div class="item mb-5">
                                 <div class="media">
-                                    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="sadmin/<?php echo $result['image'] ?>" alt="image">
+                                    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="https://dummyimage.com/600x400/000/f0f2f5.jpg" alt="image">
                                     <div class="media-body">
                                         <h3 class="title mb-1">
                                           <a href="blog-post.php?id=<?php echo $result['id'] ?>"><?php echo $result['title'] ?></a></h3>
