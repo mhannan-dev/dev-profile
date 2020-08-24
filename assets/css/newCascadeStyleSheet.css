@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 19, 2020, 11:18:34 PM
+    Author     : Mejabin
+*/
+
+
+.cr-post {
+    margin-bottom: 10px;
+}
+.cr-post h4 {
+    padding: 10px 20px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    background-color: #5FCB71;
+    border-radius: 5px;
+    
+}
+.cr-post ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.cr-post ul li {
+    left: 0;
+}
+
+.cr-post ul li {
+	border-bottom: 1px dashed #5FCB71;
+	font-size: 16px;
+	padding: 5px 8px 5px 0;
+       
+}
+.cr-post ul li a {
+	color: #4f4f4f;    
+}
+.cr-post ul li a:hover {
+	color: #000;
+       
+}
+.pagination a {
+    
+    color: #FFF;
+    text-decoration: none;
+    background-color: #5FCB71;
+    padding: 10px 15px;
+    margin: .5px;
+    border-radius: 5px;
+}
