@@ -2,7 +2,7 @@
                     <div class="cr-post">
                         <h4>Category</h4>
                         <ul>
-                            <li><a href="">Front End</a></li>
+                            
                             <?php
                             $cat_query = "SELECT * FROM tbl_category";
                             $cat_post = $db->select($cat_query);
