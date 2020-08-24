@@ -1,2 +1,2 @@
 <?php
-echo "Abc GIT";
+echo "This is another contact";
