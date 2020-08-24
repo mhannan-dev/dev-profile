@@ -79,7 +79,7 @@ if ($category)
                                                 <td><?php echo $result['body']; ?></td>
                                                 <td><?php echo $result['name']; ?></td>
                                                 <td><?php echo $result['author']; ?></td>
-                                                <td><img src="<?php echo $result['image'] ?>" height="50px; width:50px;"></td>
+                                                <td><img src="https://picsum.photos/200/300/?blur" height="50px; width:50px;"></td>
 							                                  <td><?php echo $fm->formatDate($result['date']); ?></td>
                                                 <td>
                                                     <a href="post_view.php?post_id=<?php echo $result['id']; ?>"><i class="fas fa-eye"></i></a>&nbsp;
