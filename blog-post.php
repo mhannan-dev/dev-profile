@@ -32,7 +32,7 @@ if (!isset($post_id) || $post_id == NULL) {
                             <div class="blog-post-body">
                                 <figure class="blog-banner">
                                     <a href="https://made4dev.com">
-                                        <img class="img-fluid" src="assets/images/blog/blog-post-banner.jpg" alt="image"></a>
+                                        <img class="img-fluid" src="https://dummyimage.com/600x400/000/f0f2f5.jpg" alt="image"></a>
 
                                 </figure>
                                 <?php echo $result['body'] ?>
