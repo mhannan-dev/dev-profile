@@ -31,6 +31,18 @@
                                     <a class="nav-link" href="cat_add.php">Category add</a>
                                 </nav>
                             </div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#service" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Service Options
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="service" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="service_list.php">Service list</a>
+                                    <a class="nav-link" href="service_add.php">Service add</a>
+                                </nav>
+                            </div>
+                            
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Pages
