@@ -1,6 +1,6 @@
 
-    
-    <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
+
+    <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->
     <div id="config-panel" class="config-panel d-none d-lg-block">
         <div class="panel-inner">
             <a id="config-trigger" class="config-trigger config-panel-hide text-center" href="#"><i class="fas fa-cog fa-spin mx-auto" data-fa-transform="down-6" ></i></a>
@@ -19,17 +19,16 @@
         </div><!--//panel-inner-->
     </div><!--//configure-panel-->
 
-    
-       
-    <!-- Javascript -->          
-    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
-    <script src="assets/plugins/popper.min.js"></script> 
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
 
-    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-    <script src="assets/js/demo/style-switcher.js"></script>     
-    
+
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <!-- <script src="assets/plugins/popper.min.js"></script> -->
+    <!-- <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="assets/js/demo/style-switcher.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
 
 </body>
-</html> 
-
+</html>

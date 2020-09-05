@@ -14,8 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 
     $title = mysqli_real_escape_string($db->link, $_POST['title']);
-    $body = mysqli_real_escape_string($db->link, $_POST['body']);
-    $tags = mysqli_real_escape_string($db->link, $_POST['tags']);
+    $descrip = mysqli_real_escape_string($db->link, $_POST['descrip']);
+    
   
 
     // Image upload
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $unique_image = substr(md5(time()) , 0, 10) . '.' . $file_ext;
     $uploaded_image = "upload/" . $unique_image;
     //Image upload
-    if ($title == "" ||  $body == "" || $file_name == "" || $tags == "")
+    if ($title == "" ||  $file_name == "" || $descrip == "")
     {
         echo "<span class='error'>Field must not be empty</span>";
     }
@@ -48,8 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     else
     {
         move_uploaded_file($file_temp, $uploaded_image);
-        $query = "INSERT INTO services(title,body,image,tags)
-                            VALUES('$title','$body','$uploaded_image','$tags')";
+        $query = "INSERT INTO services(title,image,descrip)
+                            VALUES('$title','$uploaded_image','$descrip')";
         $inserted_rows = $db->insert($query);
         #print_r($inserted_rows);
         if ($inserted_rows)
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         }
         else
         {
-            echo "<span class='error'>Service not inserted successfully.</span>";
+            echo "<span class='error'>Service not inserted.</span>";
         }
     }
 }
@@ -66,19 +66,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                                     <form action="" method="post" enctype="multipart/form-data">
                                         
 
+                                        
                                         <div class="form-group">
-                                            <label class="small mb-1" for="seoTags">SEO Related Tags</label>
-                                            <input class="form-control py-2" name="tags" type="text" placeholder="SEO Related Tags">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="small mb-1">Name of service</label>
+                                            <label class="small mb-1">Title of service</label>
                                             <input class="form-control py-2" name="title" type="text" placeholder="Enter title">
                                         </div>
 
                                         <div class="form-group">
                                             <label>Body Content</label>
-                                            <textarea class="form-control tinymce" id="mytextarea" name="body" rows="8"></textarea>
+                                            <textarea class="form-control tinymce" id="mytextarea" name="descrip" rows="8"></textarea>
                                         </div>
                                         <div class="form-group">
 

@@ -50,7 +50,8 @@ if (isset($_GET['cat_delete_id']))
                                                 <th>Actions</th>
                                             </tr>
                                         </tfoot>
-                                        <tbody><?php
+                                        <tbody>
+<?php
 $query = "SELECT * from tbl_category ORDER BY id";
 $category = $db->select($query);
 if ($category)

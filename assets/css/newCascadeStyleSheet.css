@@ -3,51 +3,85 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : Aug 19, 2020, 11:18:34 PM
     Author     : Mejabin
 */
-
-
 .cr-post {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 .cr-post h4 {
-    padding: 10px 20px;
-    color: #FFFFFF;
-    font-size: 1rem;
-    background-color: #5FCB71;
-    border-radius: 5px;
-    
+  padding: 10px 20px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  background-color: #5FCB71;
+  border-radius: 5px;
 }
+
 .cr-post ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-.cr-post ul li {
-    left: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .cr-post ul li {
-	border-bottom: 1px dashed #5FCB71;
-	font-size: 16px;
-	padding: 5px 8px 5px 0;
-       
+  left: 0;
 }
+
+.cr-post ul li {
+  border-bottom: 1px dashed #5FCB71;
+  font-size: 16px;
+  padding: 5px 8px 5px 0;
+}
+
 .cr-post ul li a {
-	color: #4f4f4f;    
+  color: #4f4f4f;
 }
+
 .cr-post ul li a:hover {
-	color: #000;
-       
+  color: #000;
 }
+
 .pagination a {
-    
-    color: #FFF;
-    text-decoration: none;
-    background-color: #5FCB71;
-    padding: 10px 15px;
-    margin: .5px;
-    border-radius: 5px;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #5FCB71;
+  padding: 10px 15px;
+  margin: .5px;
+  border-radius: 5px;
 }
+/* portfolio */
+.portfolio-text {
+	margin: 0 auto;
+  text-align: center;
+}
+.portfolio-text h2{
+  margin-top: 50px;
+}
+
+.little-desc {
+	margin: 30px 0;
+}
+
+.items {
+	margin: 0 auto;
+  margin-bottom: 10px;
+}
+.gallery-container {
+	margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+ .gallery-container img {
+   width: 450px;
+   border-radius: 5px;
+   height:auto;
+ }
+ .gallery-container h4 {
+ 	color: #434242;
+ 	margin: 15px 0;
+ }
+/* Portfolio  end */

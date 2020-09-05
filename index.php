@@ -21,21 +21,20 @@ else
 $start_frm = ($page - 1) * $per_page;
 ?>
 
-                    <?php
+<?php
 $query = "select * from tbl_post limit $start_frm, $per_page";
-
 $post = $db->select($query);
 if ($post)
 {
     while ($result = $post->fetch_assoc())
     {
-        #print_r($result);
-
+       // print_r($result);
 ?>
 
                             <div class="item mb-5">
                                 <div class="media">
-                                    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="https://dummyimage.com/600x400/000/f0f2f5.jpg" alt="image">
+                                    
+                                    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="sadmin/<?php echo $result['image'] ?>" alt="image">
                                     <div class="media-body">
                                         <h3 class="title mb-1">
                                           <a href="blog-post.php?id=<?php echo $result['id'] ?>"><?php echo $result['title'] ?></a></h3>
@@ -43,7 +42,6 @@ if ($post)
                                             <span class="date"><?php echo $fm->formatDate($result['date']); ?></span>
                                             <span class="time"><?php echo $result['author'] ?></span>
                                             <a class="more-link"><?php echo $result['tags'] ?></a>
-
                                         </div>
                                         <div class="intro">
                                             <?php echo $fm->textShorten($result['body'], 250) ?>
@@ -52,8 +50,6 @@ if ($post)
                                     </div><!--//media-body-->
                                 </div><!--//media-->
                             </div><!--//item-->
-
-
 <?php
     } ?>
 
@@ -78,17 +74,11 @@ else
     echo "No Post Found";
 }
 ?>
-                </div>
+</div>
 <?php include './inc/sidebar.php'; ?>
-
-                <!--
-                -->
+            <!---->
             </div>
             <!-- Pagination -->
-
-
-
-
         </div>
     </section>
 

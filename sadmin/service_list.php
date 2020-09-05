@@ -10,19 +10,15 @@ include './inc/sidebar.php';
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
                         <?php
-if (isset($_GET['cat_delete_id']))
-{
-    $cat_id = $_GET['cat_delete_id'];
-    $cat_delete_sql = "DELETE FROM tbl_category WHERE id='$cat_id'";
-    $delete_selected_cat = $db->delete($cat_delete_sql);
+if (isset($_GET['service_delete_id'])) {
+    $servc_id = $_GET['service_delete_id'];
+    $servc_delete_sql = "DELETE FROM services WHERE id='$servc_id'";
+    $delete_selected_service = $db->delete($servc_delete_sql);
 
-    if ($delete_selected_cat)
-    {
-        echo "<span class='success'>Category deleted successfully</span>";
-    }
-    else
-    {
-        echo "<span class='error'>Category not deleted successfully</span>";
+    if ($delete_selected_service) {
+        echo "<span class='success'>Service deleted successfully</span>";
+    } else {
+        echo "<span class='error'>Service not deleted!</span>";
     }
 }
 
@@ -31,7 +27,7 @@ if (isset($_GET['cat_delete_id']))
 <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
-                                Category Table
+                                Service Table
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -40,6 +36,8 @@ if (isset($_GET['cat_delete_id']))
                                             <tr>
                                                <th>SL.</th>
                                                 <th>Title</th>
+                                                <th>Image</th>
+                                                <th>Body</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -47,32 +45,35 @@ if (isset($_GET['cat_delete_id']))
                                             <tr>
                                                  <th>SL.</th>
                                                 <th>Title</th>
+                                                <th>Image</th>
+                                                <th>Body</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </tfoot>
-                                        <tbody><?php
-$query = "SELECT * from tbl_category ORDER BY id";
-$category = $db->select($query);
-if ($category)
-{
+                                        <tbody>
+<?php
+$query = "SELECT * from services ORDER BY id";
+$services = $db->select($query);
+if ($services) {
     $i = 0;
-    while ($result = $category->fetch_assoc())
-    {
+    while ($result = $services->fetch_assoc()) {
         $i++;
-        #print_r($result);
+        // print_r($result);
 
-?>
+        ?>
                                             <tr>
                                                 <td><?php echo $i; ?></td>
-						<td><?php echo $result['name']; ?></td>
+						                        <td><?php echo $result['title']; ?></td>
+                                                <td><img src="<?php echo $result['image'] ?>" alt="<?php echo $result['title']; ?>" style="width:80px; height:80px;" ></td>
+                                                <td><?php echo $result['descrip']; ?></td>
                                                 <td>
-                                                    <a href="cat_update.php?cat_id=<?php echo $result['id']; ?>"><i class="fas fa-edit"></i></a>&nbsp;
-                                                    <a href="?cat_delete_id=<?php echo $result['id']; ?>" onclick="return confirm('Are you sure want to delete this item?')"><i class="fas fa-trash-alt"></i></a>
+                                                    <a href="service_update.php?cat_id=<?php echo $result['id']; ?>"><i class="fas fa-edit"></i></a>&nbsp;
+                                                    <a href="?service_delete_id=<?php echo $result['id']; ?>" onclick="return confirm('Are you sure want to delete this item?')"><i class="fas fa-trash-alt"></i></a>
                                                 </td>
                                             </tr>
                                             <?php
-    }
-} ?>
+}
+}?>
 
 
                                         </tbody>
@@ -82,4 +83,4 @@ if ($category)
                         </div>
                     </div>
                 </main>
-<?php include './inc/footer.php'; ?>
+<?php include './inc/footer.php';?>
